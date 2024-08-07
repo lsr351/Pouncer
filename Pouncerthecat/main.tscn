@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0d3ih3fcs1wq"]
+
+[ext_resource type="PackedScene" uid="uid://g3txli4rtm7r" path="res://Scenes/the_beginning.tscn" id="1_uauob"]
+[ext_resource type="PackedScene" uid="uid://bfljmgxsp0bpt" path="res://pouncer.tscn" id="2_s1cyy"]
+[ext_resource type="PackedScene" uid="uid://bgilnlg6p1rgr" path="res://Scenes/flea.tscn" id="3_fbu37"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TheBeginning" parent="." instance=ExtResource("1_uauob")]
+
+[node name="Pouncer" parent="." instance=ExtResource("2_s1cyy")]
+position = Vector2(171, 502)
+
+[node name="Flea" parent="." instance=ExtResource("3_fbu37")]
+position = Vector2(282, 500)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(198, 359)
