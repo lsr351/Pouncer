@@ -5,9 +5,6 @@ extends CharacterBody2D
 var speed = 200
 
 
-
-
-
 func _ready():
 	var screen_size = get_viewport_rect().size
 
