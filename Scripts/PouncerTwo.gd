@@ -10,7 +10,7 @@ func _process(delta):
 	if input_direction:
 		pouncer.play("run")
 	else:
-		pouncer.stop()
+		pouncer.play("idle")
 
 	if input_direction == Vector2(1, 0):
 		pouncer.flip_h = false
@@ -19,8 +19,10 @@ func _process(delta):
 	
 	if is_on_floor():
 		if Input.is_action_pressed("jump"):
-			#pouncer.play("pounce")
 			velocity.y -= jump_strength * speed * delta
+	elif !is_on_floor():
+		pouncer.play("jump")
+		
 	velocity.x = input_direction.x * speed
 	
 func _physics_process(delta):
