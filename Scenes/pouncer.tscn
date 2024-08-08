@@ -1,8 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://bfljmgxsp0bpt"]
+[gd_scene load_steps=40 format=3 uid="uid://bfljmgxsp0bpt"]
 
 [ext_resource type="Script" path="res://Scripts/pouncer.gd" id="1_f0ch8"]
 [ext_resource type="Texture2D" uid="uid://epbnug7pdy7" path="res://Art/Epithetsoup_Art/cat.png" id="1_jd63l"]
 [ext_resource type="Script" path="res://Scripts/Components/GravityComponent.gd" id="3_vyll4"]
+[ext_resource type="PackedScene" uid="uid://usn3gfh3mdxx" path="res://Scenes/SubScenes/Health.tscn" id="4_bll88"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kc2d1"]
 atlas = ExtResource("1_jd63l")
@@ -130,23 +131,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8yjn"]
 size = Vector2(27, 23)
 
-[sub_resource type="Animation" id="Animation_5r8j7"]
-resource_name = "run"
-length = 0.75
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [1, 3, 4, 5]
-}
-
 [sub_resource type="Animation" id="Animation_45lyo"]
 length = 0.001
 tracks/0/type = "value"
@@ -156,10 +140,25 @@ tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 0]
+}
+
+[sub_resource type="Animation" id="Animation_36js8"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [SubResource("SpriteFrames_ic0a1")]
 }
 
 [sub_resource type="Animation" id="Animation_l4slf"]
@@ -179,19 +178,21 @@ tracks/0/keys = {
 "values": ["", &"idle", "", ""]
 }
 
-[sub_resource type="Animation" id="Animation_36js8"]
-resource_name = "attack"
+[sub_resource type="Animation" id="Animation_5r8j7"]
+resource_name = "run"
+length = 0.75
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.3),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [SubResource("SpriteFrames_ic0a1")]
+"values": [1, 3, 4, 5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o6u0g"]
@@ -260,7 +261,7 @@ script = ExtResource("1_f0ch8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ic0a1")
-animation = &"idle"
+animation = &"run"
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -288,3 +289,6 @@ parameters/conditions/idle = false
 parameters/conditions/moving = false
 parameters/idle/blend_position = Vector2(0.000825763, 1.08922)
 parameters/pounce/blend_position = Vector2(0, 0)
+
+[node name="Health" parent="." instance=ExtResource("4_bll88")]
+visible = false
