@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0d3ih3fcs1wq"]
 
-[ext_resource type="PackedScene" uid="uid://g3txli4rtm7r" path="res://Scenes/the_beginning.tscn" id="1_e6gsp"]
 [ext_resource type="PackedScene" uid="uid://bh8qcvtn1i6pt" path="res://Scenes/Characters/pouncer_two.tscn" id="2_75o5p"]
+[ext_resource type="PackedScene" uid="uid://y56s48hl6bjp" path="res://Scenes/level_one.tscn" id="2_nkdmx"]
 
 [node name="Main" type="Node2D"]
 
-[node name="TheBeginning" parent="." instance=ExtResource("1_e6gsp")]
+[node name="LevelOne" parent="." instance=ExtResource("2_nkdmx")]
 
 [node name="PouncerTwo" parent="." instance=ExtResource("2_75o5p")]
-position = Vector2(115, 232)
+position = Vector2(191, 423)
