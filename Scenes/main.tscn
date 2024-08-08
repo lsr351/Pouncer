@@ -8,4 +8,4 @@
 [node name="TheBeginning" parent="." instance=ExtResource("1_e6gsp")]
 
 [node name="PouncerTwo" parent="." instance=ExtResource("2_75o5p")]
-position = Vector2(224, 502)
+position = Vector2(115, 232)

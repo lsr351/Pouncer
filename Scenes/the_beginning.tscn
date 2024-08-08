@@ -621,8 +621,10 @@ sources/0 = SubResource("TileSetAtlasSource_8e6s4")
 script = ExtResource("1_x888g")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1148.0
-offset_bottom = 667.0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 1155.0
+offset_bottom = 671.0
 texture = ExtResource("4_gt74k")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -636,7 +638,7 @@ layer_2/name = "wall"
 layer_2/tile_data = PackedInt32Array()
 
 [node name="Flea" parent="." instance=ExtResource("2_l6c7h")]
-position = Vector2(781, 508)
+position = Vector2(431, 248)
 
 [node name="Flea2" parent="." instance=ExtResource("2_l6c7h")]
-position = Vector2(278, 508)
+position = Vector2(192, 248)

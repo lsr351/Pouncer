@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://regxiotv43lg"
-path="res://.godot/imported/BoxesBackgroundHospital.png-778c88927f390f5b7befe99abfd5ca51.ctex"
+uid="uid://cgh6lfcnkqeit"
+path="res://.godot/imported/boxes_tiles_new.png-41d0fa0269902df0214e16e6c53a7eae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/SubScenes/BoxesBackgroundHospital.png"
-dest_files=["res://.godot/imported/BoxesBackgroundHospital.png-778c88927f390f5b7befe99abfd5ca51.ctex"]
+source_file="res://Art/Epithetsoup_Art/boxes_tiles_new.png"
+dest_files=["res://.godot/imported/boxes_tiles_new.png-41d0fa0269902df0214e16e6c53a7eae.ctex"]
 
 [params]
 
