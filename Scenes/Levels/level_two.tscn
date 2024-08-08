@@ -13,6 +13,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_p5xws")
 
+[node name="EndLevelDoor" parent="." instance=ExtResource("5_qvly8")]
+position = Vector2(1008, 428)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_qd7t5")
 format = 2
@@ -29,6 +32,3 @@ position = Vector2(744, 486)
 
 [node name="PouncerTwo" parent="." instance=ExtResource("4_rlpmg")]
 position = Vector2(121, 479)
-
-[node name="EndLevelDoor" parent="." instance=ExtResource("5_qvly8")]
-position = Vector2(1016, 417)

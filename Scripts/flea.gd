@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
 @onready var flea = $AnimatedSprite2D
-#var speed = 150
-#var is_moving_right = false
+
 
 func _ready():
 	flea.flip_h = true

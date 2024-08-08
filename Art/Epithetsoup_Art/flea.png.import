@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj528oa1abnll"
-path="res://.godot/imported/Untitled_08-06-2024_09-59-41.png-5a82f7ef9a35e4e6dc489ec5465b8634.ctex"
+path="res://.godot/imported/flea.png-eb61c5f4297da4959b748bbe7b975f33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Epithetsoup_Art/Untitled_08-06-2024_09-59-41.png"
-dest_files=["res://.godot/imported/Untitled_08-06-2024_09-59-41.png-5a82f7ef9a35e4e6dc489ec5465b8634.ctex"]
+source_file="res://Art/Epithetsoup_Art/flea.png"
+dest_files=["res://.godot/imported/flea.png-eb61c5f4297da4959b748bbe7b975f33.ctex"]
 
 [params]
 
