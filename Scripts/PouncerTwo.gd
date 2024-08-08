@@ -7,7 +7,7 @@ var speed = 200
 
 func _process(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	if input_direction:
+	if input_direction: # Plays the run animation and idle
 		pouncer.play("run")
 	else:
 		pouncer.play("idle")
@@ -16,11 +16,11 @@ func _process(delta):
 		pouncer.flip_h = false
 	elif input_direction == Vector2(-1, 0):
 		pouncer.flip_h = true
-	
+
 	if is_on_floor():
 		if Input.is_action_pressed("jump"):
 			velocity.y -= jump_strength * speed * delta
-	elif !is_on_floor():
+	if !is_on_floor():
 		pouncer.play("jump")
 		
 	velocity.x = input_direction.x * speed
