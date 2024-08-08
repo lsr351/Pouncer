@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0d3ih3fcs1wq"]
 
 [ext_resource type="PackedScene" uid="uid://bh8qcvtn1i6pt" path="res://Scenes/Characters/pouncer_two.tscn" id="2_75o5p"]
-[ext_resource type="PackedScene" uid="uid://y56s48hl6bjp" path="res://Scenes/level_one.tscn" id="2_nkdmx"]
+[ext_resource type="PackedScene" uid="uid://y56s48hl6bjp" path="res://Scenes/Levels/level_one.tscn" id="2_nkdmx"]
 
 [node name="Main" type="Node2D"]
 
