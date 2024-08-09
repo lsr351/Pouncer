@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://1hqlicjmr6mh" path="res://Art/Epithetsoup_Art/BoxesBackgroundHospital.png" id="1_p5xws"]
 [ext_resource type="TileSet" uid="uid://catlcjnv1yi5y" path="res://Scenes/Levels/Resources/TileMap.tres" id="2_qd7t5"]
-[ext_resource type="PackedScene" uid="uid://bgilnlg6p1rgr" path="res://Scenes/flea.tscn" id="3_t5shr"]
+[ext_resource type="PackedScene" uid="uid://bgilnlg6p1rgr" path="res://Scenes/Characters/Enemies/flea.tscn" id="3_t5shr"]
 [ext_resource type="PackedScene" uid="uid://bh8qcvtn1i6pt" path="res://Scenes/Characters/pouncer_two.tscn" id="4_rlpmg"]
 [ext_resource type="PackedScene" uid="uid://cafecky8rnrt3" path="res://Scenes/Levels/end_level_door.tscn" id="5_qvly8"]
 

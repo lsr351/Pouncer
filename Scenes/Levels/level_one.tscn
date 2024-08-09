@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://y56s48hl6bjp"]
+[gd_scene load_steps=8 format=3 uid="uid://y56s48hl6bjp"]
 
 [ext_resource type="Texture2D" uid="uid://1hqlicjmr6mh" path="res://Art/Epithetsoup_Art/BoxesBackgroundHospital.png" id="1_vlwdu"]
 [ext_resource type="Texture2D" uid="uid://c7vcbk1re2yvf" path="res://Art/Epithetsoup_Art/Boxes_background.png" id="2_j0sjy"]
 [ext_resource type="TileSet" uid="uid://catlcjnv1yi5y" path="res://Scenes/Levels/Resources/TileMap.tres" id="2_yc3vp"]
-[ext_resource type="PackedScene" uid="uid://bgilnlg6p1rgr" path="res://Scenes/flea.tscn" id="3_v8jr7"]
+[ext_resource type="PackedScene" uid="uid://bgilnlg6p1rgr" path="res://Scenes/Characters/Enemies/flea.tscn" id="3_v8jr7"]
 [ext_resource type="PackedScene" uid="uid://cafecky8rnrt3" path="res://Scenes/Levels/end_level_door.tscn" id="4_q74nt"]
+[ext_resource type="PackedScene" uid="uid://bh8qcvtn1i6pt" path="res://Scenes/Characters/pouncer_two.tscn" id="6_r5ykf"]
+[ext_resource type="PackedScene" uid="uid://bcf4aia7bb5wf" path="res://Scenes/Levels/Items/hide_box.tscn" id="7_dh17g"]
 
 [node name="LevelOne" type="Node2D"]
 
@@ -43,3 +45,9 @@ layer_1/tile_data = PackedInt32Array(3342468, 655361, 56, 3408004, 655361, 57, 3
 
 [node name="Flea" parent="." instance=ExtResource("3_v8jr7")]
 position = Vector2(287, 494)
+
+[node name="PouncerTwo" parent="." instance=ExtResource("6_r5ykf")]
+position = Vector2(304, 99)
+
+[node name="HideBox" parent="." instance=ExtResource("7_dh17g")]
+position = Vector2(173, 487)

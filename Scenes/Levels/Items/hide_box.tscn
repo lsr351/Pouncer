@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcf4aia7bb5wf"]
+
+[ext_resource type="Texture2D" uid="uid://bg3cjtoln142q" path="res://Art/Epithetsoup_Art/boxhide.png" id="1_0m0w4"]
+[ext_resource type="Script" path="res://Scripts/hide_box.gd" id="1_3pumr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqpas"]
+atlas = ExtResource("1_0m0w4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v68at"]
+atlas = ExtResource("1_0m0w4")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pjeg"]
+atlas = ExtResource("1_0m0w4")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysoyk"]
+atlas = ExtResource("1_0m0w4")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nf4eh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqpas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v68at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pjeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysoyk")
+}],
+"loop": true,
+"name": &"eyes",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssah8"]
+size = Vector2(59, 37)
+
+[node name="HideBox" type="Node2D"]
+script = ExtResource("1_3pumr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nf4eh")
+animation = &"eyes"
+frame_progress = 0.332704
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_ssah8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
