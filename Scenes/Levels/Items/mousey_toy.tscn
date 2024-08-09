@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://siia3dyjrfk"]
+[gd_scene load_steps=11 format=3 uid="uid://siia3dyjrfk"]
 
 [ext_resource type="Texture2D" uid="uid://7whj3rk4iexh" path="res://Art/Epithetsoup_Art/mousytoy.png" id="1_1rpe6"]
+[ext_resource type="Script" path="res://Scripts/mousey_toy.gd" id="1_k6bqx"]
 [ext_resource type="Script" path="res://Scripts/Components/AnimateSpriteComponent.gd" id="2_dv1rw"]
+[ext_resource type="AudioStream" uid="uid://cg1o18huu6jc0" path="res://Art/SoundFX/squeak.mp3" id="4_h1spj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prd7q"]
 atlas = ExtResource("1_1rpe6")
@@ -43,6 +45,7 @@ animations = [{
 radius = 7.0
 
 [node name="MouseyToy" type="Node2D"]
+script = ExtResource("1_k6bqx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s37pm")
@@ -57,3 +60,9 @@ shape = SubResource("CircleShape2D_xptom")
 [node name="CompAnimateSprite" type="Node" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("2_dv1rw")
 sprite = NodePath("../AnimatedSprite2D")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_h1spj")
+volume_db = 3.765
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

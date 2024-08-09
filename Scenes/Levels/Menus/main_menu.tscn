@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dknqxqmb63e1k"]
+[gd_scene load_steps=3 format=3 uid="uid://dknqxqmb63e1k"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_wpim2"]
+[ext_resource type="AudioStream" uid="uid://c1ov72t374v0k" path="res://Art/SoundFX/Kitty Kung Fu 01.ogg" id="2_55kit"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -44,5 +45,9 @@ offset_bottom = 240.0
 theme_override_colors/font_color = Color(0.839216, 0.694118, 0, 1)
 theme_override_font_sizes/font_size = 68
 text = "TO BE ANNOUNCED"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_55kit")
+autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

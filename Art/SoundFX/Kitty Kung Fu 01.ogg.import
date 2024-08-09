@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1ov72t374v0k"
+path="res://.godot/imported/Kitty Kung Fu 01.ogg-17244cb606343efacee7513607977a42.oggvorbisstr"
+
+[deps]
+
+source_file="res://Art/SoundFX/Kitty Kung Fu 01.ogg"
+dest_files=["res://.godot/imported/Kitty Kung Fu 01.ogg-17244cb606343efacee7513607977a42.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
