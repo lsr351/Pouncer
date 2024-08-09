@@ -17,3 +17,5 @@ func _process(delta):
 func _physics_process(delta):
 	move_and_slide()
 
+func _on_comp_player_hide_signal_hide_player(message):
+	player_in_box = true

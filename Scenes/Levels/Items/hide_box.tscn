@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcf4aia7bb5wf"]
+[gd_scene load_steps=10 format=3 uid="uid://bcf4aia7bb5wf"]
 
 [ext_resource type="Texture2D" uid="uid://bg3cjtoln142q" path="res://Art/Epithetsoup_Art/boxhide.png" id="1_0m0w4"]
 [ext_resource type="Script" path="res://Scripts/hide_box.gd" id="1_3pumr"]
+[ext_resource type="Script" path="res://Scripts/Components/PlayerHideSignalComponent.gd" id="3_h4vkr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qqpas"]
 atlas = ExtResource("1_0m0w4")
@@ -56,5 +57,11 @@ frame_progress = 0.943331
 position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_ssah8")
 
+[node name="CompPlayerHideSignal" type="Node" parent="." node_paths=PackedStringArray("area", "collision")]
+script = ExtResource("3_h4vkr")
+area = NodePath("../Area2D")
+collision = NodePath("../Area2D/CollisionShape2D")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="hide_player" from="CompPlayerHideSignal" to="." method="_on_comp_player_hide_signal_hide_player"]
