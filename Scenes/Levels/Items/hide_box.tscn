@@ -48,7 +48,7 @@ script = ExtResource("1_3pumr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nf4eh")
 animation = &"eyes"
-frame_progress = 0.332704
+frame_progress = 0.943331
 
 [node name="Area2D" type="Area2D" parent="."]
 
