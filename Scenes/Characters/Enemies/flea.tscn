@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgilnlg6p1rgr"]
+[gd_scene load_steps=12 format=3 uid="uid://bgilnlg6p1rgr"]
 
 [ext_resource type="Script" path="res://Scripts/flea.gd" id="1_wtqej"]
 [ext_resource type="Texture2D" uid="uid://bj528oa1abnll" path="res://Art/Epithetsoup_Art/flea.png" id="2_c3yil"]
 [ext_resource type="Script" path="res://Scripts/components/GravityComponent.gd" id="3_wmhhf"]
-[ext_resource type="Script" path="res://Scripts/components/EnemyMovComponent.gd" id="4_q68ry"]
 [ext_resource type="Script" path="res://Scripts/components/PlayerHideSignalComponent.gd" id="5_finri"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfvkn"]
@@ -50,7 +49,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4h5qp"]
-size = Vector2(26, 17)
+size = Vector2(19, 17)
 
 [node name="Flea" type="CharacterBody2D" groups=["enemy"]]
 collision_mask = 3
@@ -61,15 +60,11 @@ sprite_frames = SubResource("SpriteFrames_hyy1p")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -0.5)
+position = Vector2(3.5, -0.5)
 shape = SubResource("RectangleShape2D_4h5qp")
 
 [node name="CompCharactersGravity" type="Node" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("3_wmhhf")
-character = NodePath("..")
-
-[node name="EnemyMovementComponent" type="Node" parent="." node_paths=PackedStringArray("character")]
-script = ExtResource("4_q68ry")
 character = NodePath("..")
 
 [node name="CompPlayerHideSignal" type="Node" parent="." node_paths=PackedStringArray("collision")]
