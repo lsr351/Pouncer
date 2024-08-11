@@ -274,4 +274,9 @@ shape = SubResource("RectangleShape2D_och4q")
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_gy6em")
 
+[node name="CoyoteTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.2
+one_shot = true
+
 [connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]
