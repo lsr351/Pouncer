@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://x0t6lop3dk13"]
+[gd_scene load_steps=8 format=3 uid="uid://x0t6lop3dk13"]
 
+[ext_resource type="Script" path="res://Scripts/level_four.gd" id="1_bobo1"]
 [ext_resource type="TileSet" uid="uid://catlcjnv1yi5y" path="res://Scenes/Levels/Resources/TileMap.tres" id="1_r20us"]
 [ext_resource type="Texture2D" uid="uid://1hqlicjmr6mh" path="res://Art/Epithetsoup_Art/BoxesBackgroundHospital.png" id="1_tfatv"]
 [ext_resource type="PackedScene" uid="uid://cafecky8rnrt3" path="res://Scenes/Levels/end_level_door.tscn" id="2_gc4nf"]
 [ext_resource type="PackedScene" uid="uid://bh8qcvtn1i6pt" path="res://Scenes/Characters/pouncer_two.tscn" id="3_o3whf"]
 [ext_resource type="PackedScene" uid="uid://bgilnlg6p1rgr" path="res://Scenes/Characters/Enemies/flea.tscn" id="4_wmx0a"]
+[ext_resource type="PackedScene" uid="uid://jkdud0n728gy" path="res://Scenes/Levels/Menus/game_over_menu.tscn" id="7_07s0y"]
 
 [node name="LevelFour" type="Node2D"]
+script = ExtResource("1_bobo1")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1154.0
@@ -32,3 +35,8 @@ position = Vector2(382, 496)
 
 [node name="Flea3" parent="." instance=ExtResource("4_wmx0a")]
 position = Vector2(493, 496)
+
+[node name="GameOverMenu" parent="." instance=ExtResource("7_07s0y")]
+visible = false
+
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]

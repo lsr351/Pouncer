@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxbc40kwl5tqu"]
+
+[ext_resource type="Texture2D" uid="uid://dmotktbidhc7c" path="res://Art/Epithetsoup_Art/Boximage.png" id="1_xhlqo"]
+[ext_resource type="Script" path="res://Scripts/components/PlatformMoveComponent.gd" id="2_lg3k4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvmsr"]
+size = Vector2(118, 31)
+
+[node name="MovingBox" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xhlqo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_nvmsr")
+
+[node name="CompPlatformMove" type="Node" parent="." node_paths=PackedStringArray("platform")]
+script = ExtResource("2_lg3k4")
+platform = NodePath("..")

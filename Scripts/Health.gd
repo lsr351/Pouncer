@@ -25,12 +25,12 @@ func _ready():
 	pass # Replace with function body.
 
 func setup_progress_bar():
-	progress_bar.max_value = health_points
-	progress_bar.value = health_points
+	#progress_bar.max_value = health_points
+	#progress_bar.value = health_points
 	# If we only have one hit point don't bother showing the health bar.
-	if health_points == 1:
-		progress_bar.visible = false
-
+	#if health_points == 1:
+		#progress_bar.visible = false
+	pass
 func take_damage(damage):
 	health_points -= damage
 	update_progress_bar(health_points)

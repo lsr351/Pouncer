@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://7whj3rk4iexh" path="res://Art/Epithetsoup_Art/mousytoy.png" id="1_1rpe6"]
 [ext_resource type="Script" path="res://Scripts/mousey_toy.gd" id="1_k6bqx"]
-[ext_resource type="Script" path="res://Scripts/Components/AnimateSpriteComponent.gd" id="2_dv1rw"]
+[ext_resource type="Script" path="res://Scripts/components/AnimateSpriteComponent.gd" id="2_dv1rw"]
 [ext_resource type="AudioStream" uid="uid://cg1o18huu6jc0" path="res://Art/SoundFX/squeak.mp3" id="4_h1spj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prd7q"]

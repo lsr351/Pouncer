@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/flea.gd" id="1_wtqej"]
 [ext_resource type="Texture2D" uid="uid://bj528oa1abnll" path="res://Art/Epithetsoup_Art/flea.png" id="2_c3yil"]
-[ext_resource type="Script" path="res://Scripts/Components/GravityComponent.gd" id="3_wmhhf"]
-[ext_resource type="Script" path="res://Scripts/Components/EnemyMovComponent.gd" id="4_q68ry"]
-[ext_resource type="Script" path="res://Scripts/Components/PlayerHideSignalComponent.gd" id="5_finri"]
+[ext_resource type="Script" path="res://Scripts/components/GravityComponent.gd" id="3_wmhhf"]
+[ext_resource type="Script" path="res://Scripts/components/EnemyMovComponent.gd" id="4_q68ry"]
+[ext_resource type="Script" path="res://Scripts/components/PlayerHideSignalComponent.gd" id="5_finri"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfvkn"]
 atlas = ExtResource("2_c3yil")
@@ -72,9 +72,6 @@ character = NodePath("..")
 script = ExtResource("4_q68ry")
 character = NodePath("..")
 
-[node name="CompPlayerHideSignal" type="Node" parent="." node_paths=PackedStringArray("area", "collision")]
+[node name="CompPlayerHideSignal" type="Node" parent="." node_paths=PackedStringArray("collision")]
 script = ExtResource("5_finri")
-area = NodePath("")
 collision = NodePath("../CollisionShape2D")
-
-[connection signal="hide_player" from="CompPlayerHideSignal" to="." method="_on_comp_player_hide_signal_hide_player"]

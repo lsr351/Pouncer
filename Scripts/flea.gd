@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var flea = $AnimatedSprite2D
 @onready var hidebox = $HideBox
 var player_in_box : bool = false
+
+
 func _ready():
 	flea.flip_h = true
 	flea.play("walk")

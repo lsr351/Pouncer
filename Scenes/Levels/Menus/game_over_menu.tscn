@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://jkdud0n728gy"]
+
+[ext_resource type="Script" path="res://Scripts/game_over_menu.gd" id="1_2h6m6"]
+[ext_resource type="Texture2D" uid="uid://r6u5s2gnq7f" path="res://Art/Epithetsoup_Art/kittyhospital.png" id="1_jao61"]
+
+[node name="GameOverMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2h6m6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 650.0
+color = Color(5.12111e-05, 0.480875, 0.882668, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = -231.0
+offset_right = 963.0
+offset_bottom = 1031.0
+texture = ExtResource("1_jao61")
+
+[node name="RestartGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 43.0
+offset_right = 327.0
+offset_bottom = 154.0
+theme_override_font_sizes/font_size = 75
+text = "Restart"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 368.0
+offset_right = 662.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 36
+text = "Kitty Flea Shots"
+
+[connection signal="pressed" from="RestartGame" to="." method="_on_restart_game_pressed"]
